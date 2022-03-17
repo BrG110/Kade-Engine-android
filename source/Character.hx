@@ -500,21 +500,22 @@ class Character extends FlxSprite
 				playAnim('idle');
 				
 				
-case '':
- frames = Paths.getSparrowAtlas('characters/Tricky/TrickyMask');
- animation.addByPrefix('idle', 'Idle', 24, false);
- animation.addByPrefix('singUP', 'Sing Up', 24, false);
- animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
- animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
- animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
+case 'trickyMask':
+				tex = Paths.getSparrowAtlas('TrickyMask','clown');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24);
+				animation.addByPrefix('singUP', 'Sing Up', 24);
+				animation.addByPrefix('singRIGHT', 'Sing Right', 24);
+				animation.addByPrefix('singDOWN', 'Sing Down', 24);
+				animation.addByPrefix('singLEFT', 'Sing Left', 24); 
+				
+				addOffset("idle", 0, -117);
+				addOffset("singUP", 93, -100);
+				addOffset("singRIGHT", 16, -164);
+				addOffset("singLEFT", 194, -95);
+				addOffset("singDOWN", 32, -168);
 
- addOffset('idle');
- addOffset('singUP');
- addOffset('singDOWN');
- addOffset('singLEFT');
- addOffset('singRIGHT');
-
- playAnim('idle');
+				playAnim('idle');
 		}
 
 		dance();
